@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,11 +9,11 @@
 
 <style>
 :root {
-    --main-color: #21c8d8;
-    --main-dark: #0ca8ba;
-    --navy: #10203f;
-    --red: #d61b4b;
-    --white: #ffffff;
+    --main-color: #21C8D8;
+    --main-dark: #0CA8BA;
+    --navy: #10203F;
+    --red: #D61B4B;
+    --white: #FFFFFF;
 }
 
 * {
@@ -30,9 +31,9 @@ body {
     );
     text-align: center;
     color: var(--white);
+    min-height: 100vh;
 }
 
-/* ヘッダー */
 header {
     background-color: var(--navy);
     padding: 25px 10px;
@@ -49,7 +50,6 @@ h1 {
     font-size: 1.1rem;
 }
 
-/* メイン画像 */
 .team-photo {
     width: 700px;
     max-width: 90%;
@@ -63,26 +63,30 @@ h1 {
         0 10px 25px rgba(0,0,0,0.3);
 }
 
-/* カレンダーエリア */
-.schedule {
-    width: 95%;
-    max-width: 1000px;
+/* カレンダー */
 
+.calendar-container {
+    width: 700px;
+    max-width: 90%;
     margin: 40px auto;
 
     background: #ffffff;
+
     border-radius: 15px;
     overflow: hidden;
 
+    border: 5px solid var(--navy);
+
     box-shadow:
-        0 10px 25px rgba(0,0,0,0.25);
+        0 10px 25px rgba(0,0,0,0.3);
 }
 
-.schedule-title {
+.calendar-title {
     background-color: var(--navy);
     color: white;
 
     padding: 15px;
+
     font-size: 1.5rem;
     font-weight: bold;
 
@@ -93,16 +97,18 @@ h1 {
     width: 100%;
     height: 700px;
     border: none;
+    display: block;
 }
 
-/* フッター */
 footer {
-    margin-top: 30px;
+    margin-top: 40px;
     padding: 20px;
 
     background-color: var(--navy);
     border-top: 4px solid var(--red);
 }
+
+/* スマホ表示 */
 
 @media (max-width: 768px) {
 
@@ -110,12 +116,27 @@ footer {
         font-size: 2rem;
     }
 
+    .subtitle {
+        font-size: 1rem;
+    }
+
     .calendar-frame {
         height: 500px;
     }
 }
-</style>
 
+@media (max-width: 480px) {
+
+    .calendar-frame {
+        height: 450px;
+    }
+
+    .calendar-title {
+        font-size: 1.2rem;
+    }
+}
+
+</style>
 </head>
 
 <body>
@@ -127,11 +148,19 @@ footer {
 
 <img
     src="260927.jpg"
-    alt="ドマーニFCユニフォーム"
-    class="team-photo"
->
+    alt="ドマーニFC"
+    class="team-photo">
 
-<iframe src="https://calendar.google.com/calendar/embed?src=domanisoccer%40gmail.com&ctz=Asia%2FTokyo" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+<div class="calendar-container"iv>
+
+    <iframe
+        class="calendar-frame"
+        src="https://calendar.google.com/calendar/embed?src=domanisoccer%40gmail.com&ctz=Asia%2FTokyo"
+        frameborder="0"
+        scrolling="no">
+    </iframe>
+
+</div>
 
 <footer>
     © 2026 DOMANI FC
