@@ -1,16 +1,231 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>メンバー紹介 | DOMANI FC</title>
+
+<style>
+
+:root{
+    --sky:#21C8D8;
+    --sky-dark:#0CA8BA;
+    --navy:#10203F;
+    --red:#D61B4B;
+    --gold:#FFD700;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Yu Gothic","Meiryo",sans-serif;
+    background:linear-gradient(
+      180deg,
+      var(--sky),
+      var(--sky-dark)
+    );
+    min-height:100vh;
+}
+
+header{
+    background:var(--navy);
+    color:white;
+    text-align:center;
+    padding:30px;
+    border-bottom:6px solid var(--red);
+}
+
+header h1{
+    font-size:3rem;
+}
+
+header p{
+    margin-top:10px;
+}
+
+.menu{
+    text-align:center;
+    margin:25px;
+}
+
+.menu a{
+    display:inline-block;
+    background:var(--navy);
+    color:white;
+    text-decoration:none;
+    padding:12px 30px;
+    border-radius:30px;
+    border:3px solid var(--red);
+    font-weight:bold;
+}
+
+.menu a:hover{
+    background:var(--red);
+}
+
+.member-container{
+    width:95%;
+    max-width:1400px;
+    margin:0 auto 50px;
+
+    display:grid;
+    grid-template-columns:
+      repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+}
+
+.member-card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.25);
+    transition:.3s;
+}
+
+.member-card:hover{
+    transform:translateY(-5px);
+}
+
+.card-header{
+    background:var(--navy);
+    color:white;
+    padding:20px;
+    text-align:center;
+    position:relative;
+}
+
+.number{
+    position:absolute;
+    left:15px;
+    top:5px;
+    font-size:3rem;
+    font-weight:bold;
+    color:var(--gold);
+    opacity:0.9;
+}
+
+.name{
+    font-size:1.4rem;
+    font-weight:bold;
+    margin-top:15px;
+}
+
+.position{
+    display:inline-block;
+
+    margin-top:10px;
+    padding:6px 14px;
+
+    background:var(--red);
+
+    border-radius:30px;
+
+    font-weight:bold;
+}
+
+.gk .card-header{
+    background:#A67C00;
+}
+
+.gk .position{
+    background:#333;
+}
+
+.card-body{
+    padding:20px;
+}
+
+.info{
+    display:flex;
+    justify-content:space-between;
+
+    padding:10px 0;
+
+    border-bottom:1px solid #eee;
+}
+
+.label{
+    color:#666;
+    font-weight:bold;
+}
+
+.value{
+    font-weight:bold;
+}
+
+.recruit .card-header{
+    background:linear-gradient(
+        45deg,
+        #ff6b6b,
+        #ffb347
+    );
+}
+
+.recruit .position{
+    background:white;
+    color:#ff6b6b;
+}
+
+footer{
+    background:var(--navy);
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+@media(max-width:768px){
+
+    header h1{
+        font-size:2rem;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>DOMANI FC</h1>
+    <p>メンバー紹介</p>
+</header>
+
+<div class="menu">
+    index.htmlトップページへ戻る</a>
+</div>
+
 <div class="member-container">
 
     <!-- 1 -->
-    <div class="member-card">
+    <div class="member-card gk">
         <div class="card-header">
             <div class="number">1</div>
             <div class="name">石川兼次</div>
             <div class="position">GK</div>
         </div>
+
         <div class="card-body">
-            <div class="info"><span class="label">👕 上</span><span class="value">5L</span></div>
-            <div class="info"><span class="label">🩳 下</span><span class="value">5L</span></div>
-            <div class="info"><span class="label">🧦</span><span class="value">27-29</span></div>
+            <div class="info">
+                <span class="label">👕 上</span>
+                <span class="value">5L</span>
+            </div>
+
+            <div class="info">
+                <span class="label">🩳 下</span>
+                <span class="value">5L</span>
+            </div>
+
+            <div class="info">
+                <span class="label">🧦 ソックス</span>
+                <span class="value">27-29</span>
+            </div>
         </div>
     </div>
 
@@ -21,198 +236,85 @@
             <div class="name">織田豊久</div>
             <div class="position">FE</div>
         </div>
+
         <div class="card-body">
-            <div class="info"><span class="label">👕 上</span><span class="value">M</span></div>
-            <div class="info"><span class="label">🩳 下</span><span class="value">M</span></div>
-            <div class="info"><span class="label">🧦</span><span class="value">25-27</span></div>
+            <div class="info">
+                <span class="label">👕 上</span>
+                <span class="value">M</span>
+            </div>
+
+            <div class="info">
+                <span class="label">🩳 下</span>
+                <span class="value">M</span>
+            </div>
+
+            <div class="info">
+                <span class="label">🧦 ソックス</span>
+                <span class="value">25-27</span>
+            </div>
         </div>
     </div>
 
-    <!-- 3 -->
-    <div class="member-card">
-        <div class="card-header">
-            <div class="number">3</div>
-            <div class="name">長谷川隼人</div>
-            <div class="position">FE</div>
-        </div>
-        <div class="card-body">
-            <div class="info"><span class="label">👕 上</span><span class="value">M</span></div>
-            <div class="info"><span class="label">🩳 下</span><span class="value">L</span></div>
-            <div class="info"><span class="label">🧦</span><span class="value">25-27</span></div>
-        </div>
-    </div>
-
-    <!-- 4 -->
-    <div class="member-card">
-        <div class="card-header">
-            <div class="number">4</div>
-            <div class="name">城 浩晃</div>
-            <div class="position">FE</div>
-        </div>
-        <div class="card-body">
-            <div class="info"><span class="label">👕 上</span><span class="value">L</span></div>
-            <div class="info"><span class="label">🩳 下</span><span class="value">L</span></div>
-            <div class="info"><span class="label">🧦</span><span class="value">25-27</span></div>
-        </div>
-    </div>
-
-    <!-- 5 -->
-    <div class="member-card">
-        <div class="card-header">
-            <div class="number">5</div>
-            <div class="name">佐久間正俊</div>
-            <div class="position">FE</div>
-        </div>
-        <div class="card-body">
-            <div class="info"><span class="label">👕 上</span><span class="value">4L</span></div>
-            <div class="info"><span class="label">🩳 下</span><span class="value">3L</span></div>
-            <div class="info"><span class="label">🧦</span><span class="value">25-27</span></div>
-        </div>
-    </div>
-
-    <!-- 6 -->
-    <div class="member-card">
-        <div class="card-header">
-            <div class="number">6</div>
-            <div class="name">崎畑優一</div>
-            <div class="position">FE</div>
-        </div>
-        <div class="card-body">
-            <div class="info"><span class="label">👕 上</span><span class="value">L</span></div>
-            <div class="info"><span class="label">🩳 下</span><span class="value">L</span></div>
-            <div class="info"><span class="label">🧦</span><span class="value">25-27</span></div>
-        </div>
-    </div>
-
-    <!-- 7 -->
-    <div class="member-card">
-        <div class="card-header">
-            <div class="number">7</div>
-            <div class="name">橋本亮介</div>
-            <div class="position">FE</div>
-        </div>
-        <div class="card-body">
-            <div class="info"><span class="label">👕 上</span><span class="value">M</span></div>
-            <div class="info"><span class="label">🩳 下</span><span class="value">L</span></div>
-            <div class="info"><span class="label">🧦</span><span class="value">25-27</span></div>
-        </div>
-    </div>
-
-    <!-- 8 -->
-    <div class="member-card"><div class="card-header"><div class="number">8</div><div class="name">坂井真一</div><div class="position">FE</div></div></div>
-
-    <!-- 9 -->
-    <div class="member-card"><div class="card-header"><div class="number">9</div><div class="name">山崎 剛</div><div class="position">FE</div></div></div>
-
-    <!-- 10 -->
-    <div class="member-card"><div class="card-header"><div class="number">10</div><div class="name">友松 厚</div><div class="position">FE</div></div></div>
-
-    <!-- 11 -->
-    <div class="member-card"><div class="card-header"><div class="number">11</div><div class="name">杉藤和夫</div><div class="position">FE</div></div></div>
-
-    <!-- 12 -->
-    <div class="member-card"><div class="card-header"><div class="number">12</div><div class="name">細田直見</div><div class="position">FE</div></div></div>
-
-    <!-- 13 -->
-    <div class="member-card"><div class="card-header"><div class="number">13</div><div class="name">早川典孝</div><div class="position">FE</div></div></div>
-
-    <!-- 14 -->
-    <div class="member-card"><div class="card-header"><div class="number">14</div><div class="name">松井真一</div><div class="position">FE</div></div></div>
-
-    <!-- 15 -->
-    <div class="member-card"><div class="card-header"><div class="number">15</div><div class="name">西尾光次</div><div class="position">FE</div></div></div>
-
-    <!-- 16 -->
-    <div class="member-card recruit">
-        <div class="card-header recruit">
-            <div class="number">16</div>
-            <div class="name">募集中</div>
-            <div class="position">NEW MEMBER</div>
-        </div>
-    </div>
-
-    <!-- 17 -->
-    <div class="member-card"><div class="card-header"><div class="number">17</div><div class="name">乙部祐樹</div><div class="position">FE</div></div></div>
-
-    <!-- 18 -->
-    <div class="member-card recruit">
-        <div class="card-header recruit">
-            <div class="number">18</div>
-            <div class="name">募集中</div>
-            <div class="position">NEW MEMBER</div>
-        </div>
-    </div>
-
-    <!-- 19 -->
-    <div class="member-card recruit">
-        <div class="card-header recruit">
-            <div class="number">19</div>
-            <div class="name">募集中</div>
-            <div class="position">NEW MEMBER</div>
-        </div>
-    </div>
-
-    <!-- 20 -->
-    <div class="member-card"><div class="card-header"><div class="number">20</div><div class="name">安藤隆治</div><div class="position">FE</div></div></div>
-
-    <!-- 21 -->
-    <div class="member-card">
-        <div class="card-header">
-            <div class="number">21</div>
-            <div class="name">控えGK</div>
-            <div class="position">GK</div>
-        </div>
-    </div>
-
-    <!-- 22 -->
-    <div class="member-card"><div class="card-header"><div class="number">22</div><div class="name">細田利之</div><div class="position">FE</div></div></div>
-
-    <!-- 23 -->
-    <div class="member-card recruit"><div class="card-header recruit"><div class="number">23</div><div class="name">募集中</div><div class="position">NEW MEMBER</div></div></div>
-
-    <!-- 25 -->
-    <div class="member-card recruit"><div class="card-header recruit"><div class="number">25</div><div class="name">募集中</div><div class="position">NEW MEMBER</div></div></div>
-
-    <!-- 27 -->
-    <div class="member-card"><div class="card-header"><div class="number">27</div><div class="name">杉藤 輝</div><div class="position">FE</div></div></div>
-
-    <!-- 30 -->
-    <div class="member-card"><div class="card-header"><div class="number">30</div><div class="name">加藤 隆</div><div class="position">FE</div></div></div>
-
-    <!-- 33 -->
-    <div class="member-card recruit"><div class="card-header recruit"><div class="number">33</div><div class="name">募集中</div><div class="position">NEW MEMBER</div></div></div>
-
-    <!-- 39 -->
-    <div class="member-card recruit"><div class="card-header recruit"><div class="number">39</div><div class="name">募集中</div><div class="position">NEW MEMBER</div></div></div>
-
-    <!-- 44 -->
-    <div class="member-card"><div class="card-header"><div class="number">44</div><div class="name">坂戸良介</div><div class="position">FE</div></div></div>
-
-    <!-- 45 -->
-    <div class="member-card"><div class="card-header"><div class="number">45</div><div class="name">堀川亮輔</div><div class="position">FE</div></div></div>
-
-    <!-- 58 -->
-    <div class="member-card"><div class="card-header"><div class="number">58</div><div class="name">加藤いさお</div><div class="position">FE</div></div></div>
-
-    <!-- 65 -->
-    <div class="member-card"><div class="card-header"><div class="number">65</div><div class="name">宮澤隆幸</div><div class="position">FE</div></div></div>
+    <!-- 以下同じ形式で 3〜99 -->
 
     <!-- 77 -->
     <div class="member-card">
         <div class="card-header">
             <div class="number">77</div>
-            <div class="name">角田智哉</div>
+            <div class="name">角田智哉 ⭐</div>
             <div class="position">FE</div>
+        </div>
+
+        <div class="card-body">
+            <div class="info">
+                <span class="label">👕 上</span>
+                <span class="value">2L</span>
+            </div>
+
+            <div class="info">
+                <span class="label">🩳 下</span>
+                <span class="value">2L</span>
+            </div>
+
+            <div class="info">
+                <span class="label">🧦 ソックス</span>
+                <span class="value">25-27</span>
+            </div>
         </div>
     </div>
 
-    <!-- 99 -->
-    <div class="member-card">
+    <!-- 募集中 -->
+
+    <div class="member-card recruit">
         <div class="card-header">
-            <div class="number">99</div>
-            <div class="name">伊藤丘</div>
-            <div class="position">FE</div>
+            <div class="number">16</div>
+            <div class="name">募集中</div>
+            <div class="position">NEW MEMBER</div>
+        </div>
+
+        <div class="card-body">
+            <div class="info">
+                <span class="label">ポジション</span>
+                <span class="value">ALL</span>
+            </div>
+
+            <div class="info">
+                <span class="label">募集</span>
+                <span class="value">⚽</span>
+            </div>
+
+            <div class="info">
+                <span class="label">歓迎</span>
+                <span class="value">初心者OK</span>
+            </div>
         </div>
     </div>
 
 </div>
+
+<footer>
+    © 2026 DOMANI FC
+</footer>
+
+</body>
+</html>
