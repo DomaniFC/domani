@@ -24,11 +24,7 @@
 
 body{
     font-family:"Yu Gothic","Meiryo",sans-serif;
-    background:linear-gradient(
-      180deg,
-      var(--sky),
-      var(--sky-dark)
-    );
+    background:linear-gradient(180deg,var(--sky),var(--sky-dark));
     min-height:100vh;
 }
 
@@ -70,21 +66,26 @@ header p{
 
 .member-container{
     width:95%;
-    max-width:1400px;
-    margin:0 auto 50px;
+    max-width:1500px;
+    margin:auto;
 
     display:grid;
     grid-template-columns:
-      repeat(auto-fit,minmax(280px,1fr));
+    repeat(auto-fit,minmax(280px,1fr));
 
     gap:25px;
+
+    padding-bottom:50px;
 }
 
 .member-card{
     background:white;
     border-radius:20px;
     overflow:hidden;
-    box-shadow:0 10px 25px rgba(0,0,0,0.25);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.25);
+
     transition:.3s;
 }
 
@@ -95,8 +96,8 @@ header p{
 .card-header{
     background:var(--navy);
     color:white;
-    padding:20px;
     text-align:center;
+    padding:20px;
     position:relative;
 }
 
@@ -104,25 +105,27 @@ header p{
     position:absolute;
     left:15px;
     top:5px;
+
     font-size:3rem;
     font-weight:bold;
+
     color:var(--gold);
-    opacity:0.9;
 }
 
 .name{
-    font-size:1.4rem;
+    font-size:1.5rem;
     font-weight:bold;
-    margin-top:15px;
+    margin-top:10px;
 }
 
 .position{
     display:inline-block;
 
     margin-top:10px;
-    padding:6px 14px;
 
     background:var(--red);
+
+    padding:5px 15px;
 
     border-radius:30px;
 
@@ -130,11 +133,7 @@ header p{
 }
 
 .gk .card-header{
-    background:#A67C00;
-}
-
-.gk .position{
-    background:#333;
+    background:#8A6C00;
 }
 
 .card-body{
@@ -162,14 +161,14 @@ header p{
 .recruit .card-header{
     background:linear-gradient(
         45deg,
-        #ff6b6b,
+        #ff7f50,
         #ffb347
     );
 }
 
 .recruit .position{
     background:white;
-    color:#ff6b6b;
+    color:#ff7f50;
 }
 
 footer{
@@ -184,7 +183,6 @@ footer{
     header h1{
         font-size:2rem;
     }
-
 }
 
 </style>
@@ -198,123 +196,105 @@ footer{
 </header>
 
 <div class="menu">
-    index.htmlトップページへ戻る</a>
-</div>
+    <a href="index.html">トップ</div>
 
-<div class="member-container">
-
-    <!-- 1 -->
-    <div class="member-card gk">
-        <div class="card-header">
-            <div class="number">1</div>
-            <div class="name">石川兼次</div>
-            <div class="position">GK</div>
-        </div>
-
-        <div class="card-body">
-            <div class="info">
-                <span class="label">👕 上</span>
-                <span class="value">5L</span>
-            </div>
-
-            <div class="info">
-                <span class="label">🩳 下</span>
-                <span class="value">5L</span>
-            </div>
-
-            <div class="info">
-                <span class="label">🧦 ソックス</span>
-                <span class="value">27-29</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- 2 -->
-    <div class="member-card">
-        <div class="card-header">
-            <div class="number">2</div>
-            <div class="name">織田豊久</div>
-            <div class="position">FE</div>
-        </div>
-
-        <div class="card-body">
-            <div class="info">
-                <span class="label">👕 上</span>
-                <span class="value">M</span>
-            </div>
-
-            <div class="info">
-                <span class="label">🩳 下</span>
-                <span class="value">M</span>
-            </div>
-
-            <div class="info">
-                <span class="label">🧦 ソックス</span>
-                <span class="value">25-27</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- 以下同じ形式で 3〜99 -->
-
-    <!-- 77 -->
-    <div class="member-card">
-        <div class="card-header">
-            <div class="number">77</div>
-            <div class="name">角田智哉 ⭐</div>
-            <div class="position">FE</div>
-        </div>
-
-        <div class="card-body">
-            <div class="info">
-                <span class="label">👕 上</span>
-                <span class="value">2L</span>
-            </div>
-
-            <div class="info">
-                <span class="label">🩳 下</span>
-                <span class="value">2L</span>
-            </div>
-
-            <div class="info">
-                <span class="label">🧦 ソックス</span>
-                <span class="value">25-27</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- 募集中 -->
-
-    <div class="member-card recruit">
-        <div class="card-header">
-            <div class="number">16</div>
-            <div class="name">募集中</div>
-            <div class="position">NEW MEMBER</div>
-        </div>
-
-        <div class="card-body">
-            <div class="info">
-                <span class="label">ポジション</span>
-                <span class="value">ALL</span>
-            </div>
-
-            <div class="info">
-                <span class="label">募集</span>
-                <span class="value">⚽</span>
-            </div>
-
-            <div class="info">
-                <span class="label">歓迎</span>
-                <span class="value">初心者OK</span>
-            </div>
-        </div>
-    </div>
-
-</div>
+<div id="members" class="member-container"></div>
 
 <footer>
-    © 2026 DOMANI FC
+© 2026 DOMANI FC
 </footer>
+
+<script>
+
+const members = [
+
+{no:1,name:"石川兼次",pos:"GK",top:"5L",bottom:"5L",sock:"27-29"},
+{no:2,name:"織田豊久",pos:"FE",top:"M",bottom:"M",sock:"25-27"},
+{no:3,name:"長谷川隼人",pos:"FE",top:"M",bottom:"L",sock:"25-27"},
+{no:4,name:"城 浩晃",pos:"FE",top:"L",bottom:"L",sock:"25-27"},
+{no:5,name:"佐久間正俊",pos:"FE",top:"4L",bottom:"3L",sock:"25-27"},
+{no:6,name:"崎畑優一",pos:"FE",top:"L",bottom:"L",sock:"25-27"},
+{no:7,name:"橋本亮介",pos:"FE",top:"M",bottom:"L",sock:"25-27"},
+{no:8,name:"坂井真一",pos:"FE",top:"2L",bottom:"L",sock:"25-27"},
+{no:9,name:"山崎 剛",pos:"FE",top:"L",bottom:"L",sock:"25-27"},
+{no:10,name:"友松 厚",pos:"FE",top:"L",bottom:"L",sock:"25-27"},
+{no:11,name:"杉藤和夫",pos:"FE",top:"2L",bottom:"L",sock:"25-27"},
+{no:12,name:"細田直見",pos:"FE",top:"L",bottom:"L",sock:"25-27"},
+{no:13,name:"早川典孝",pos:"FE",top:"L",bottom:"L",sock:"25-27"},
+{no:14,name:"松井真一",pos:"FE",top:"L",bottom:"L",sock:"25-27"},
+{no:15,name:"西尾光次",pos:"FE",top:"2L",bottom:"L",sock:"25-27"},
+
+{no:16,name:"募集中",pos:"NEW MEMBER",top:"",bottom:"",sock:""},
+{no:17,name:"乙部祐樹",pos:"FE",top:"L",bottom:"L",sock:"25-27"},
+{no:18,name:"募集中",pos:"NEW MEMBER",top:"",bottom:"",sock:""},
+{no:19,name:"募集中",pos:"NEW MEMBER",top:"",bottom:"",sock:""},
+
+{no:20,name:"安藤隆治",pos:"FE",top:"L",bottom:"L",sock:"25-27"},
+{no:21,name:"控えGK",pos:"GK",top:"2L",bottom:"2L",sock:"25-27"},
+{no:22,name:"細田利之",pos:"FE",top:"L",bottom:"L",sock:"25-27"},
+{no:23,name:"募集中",pos:"NEW MEMBER",top:"",bottom:"",sock:""},
+{no:25,name:"募集中",pos:"NEW MEMBER",top:"",bottom:"",sock:""},
+
+{no:27,name:"杉藤 輝",pos:"FE",top:"L",bottom:"L",sock:"25-27"},
+{no:30,name:"加藤 隆",pos:"FE",top:"L",bottom:"L",sock:"25-27"},
+{no:33,name:"募集中",pos:"NEW MEMBER",top:"",bottom:"",sock:""},
+{no:39,name:"募集中",pos:"NEW MEMBER",top:"",bottom:"",sock:""},
+
+{no:44,name:"坂戸良介",pos:"FE",top:"L",bottom:"L",sock:"27-29"},
+{no:45,name:"堀川亮輔",pos:"FE",top:"2L",bottom:"2L",sock:"25-27"},
+{no:58,name:"加藤いさお",pos:"FE",top:"2L",bottom:"2L",sock:"25-27"},
+{no:65,name:"宮澤隆幸",pos:"FE",top:"2L",bottom:"2L",sock:"25-27"},
+{no:77,name:"角田智哉",pos:"FE",top:"2L",bottom:"2L",sock:"25-27"},
+{no:99,name:"伊藤丘",pos:"FE",top:"L",bottom:"L",sock:"25-27"}
+
+];
+
+const container = document.getElementById("members");
+
+members.forEach(m => {
+
+   const isRecruit = m.name === "募集中";
+   const isGK = m.pos === "GK";
+
+   const card = document.createElement("div");
+
+   card.className =
+      "member-card " +
+      (isRecruit ? "recruit" : "") +
+      (isGK ? " gk" : "");
+
+   card.innerHTML = `
+      <div class="card-header">
+         <div class="number">${m.no}</div>
+         <div class="name">${m.name}</div>
+         <div class="position">${m.pos}</div>
+      </div>
+
+      <div class="card-body">
+
+         <div class="info">
+            <span class="label">👕 上</span>
+            <span class="value">${m.top || "-"}</span>
+         </div>
+
+         <div class="info">
+            <span class="label">🩳 下</span>
+            <span class="value">${m.bottom || "-"}</span>
+         </div>
+
+         <div class="info">
+            <span class="label">🧦 ソックス</span>
+            <span class="value">${m.sock || "-"}</span>
+         </div>
+
+      </div>
+   `;
+
+   container.appendChild(card);
+
+});
+
+</script>
 
 </body>
 </html>
