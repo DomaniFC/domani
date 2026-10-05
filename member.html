@@ -207,7 +207,6 @@ footer{
 <script>
 
 const members = [
-
     {no:1,name:"石川 兼次",pos:"GK",top:"5L",bottom:"5L",sock:"27-29"},
     {no:2,name:"織田 貴久",pos:"FE",top:"M",bottom:"M",sock:"25-27"},
     {no:3,name:"長谷川 隼人",pos:"FE",top:"M",bottom:"L",sock:"25-27"},
@@ -257,10 +256,8 @@ const members = [
 const container = document.getElementById("members");
 
 members.forEach(m => {
-
    const isRecruit = m.name === "募集中";
    const isGK = m.pos === "GK";
-
    const card = document.createElement("div");
 
    card.className =
@@ -276,10 +273,9 @@ members.forEach(m => {
       </div>
 
       <div class="card-body">
-
          <div class="info">
             <span class="label">👕 上</span>
-            <span class="value">${m.top || "-"}</span>
+
          </div>
 
          <div class="info">
